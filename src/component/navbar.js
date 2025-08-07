@@ -1,52 +1,77 @@
-import React, { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { FaShoppingCart } from 'react-icons/fa';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { MdKeyboardArrowDown } from 'react-icons/md';
+import { RxCross2 } from 'react-icons/rx';
+import flag from '../image/flag.png'; // Replace with your flag image
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-  <nav className="bg-[#DA9100] text-black px-6 py-4 shadow-md fixed top-0 w-full z-50">
-      <div className="flex items-center justify-between">
-        {/* Logo */}
-        <div className="text-3xl font-bold tracking-widest font-serif text-white">
-          BLACKJACK
+    <nav className="w-full bg-white shadow-sm font-inter">
+      <div className="max-w-[1440px] h-[80px] mx-auto flex items-center justify-between px-4 py-3">
+        {/* Left */}
+        <div className="flex items-center space-x-6">
+          <div className="flex items-center">
+            <span className="text-3xl font-semibold text-gray-800">Travelling</span>
+
+          </div>
+
+          {/* Desktop Menu */}
+          <div className="hidden lg:flex items-center space-x-5 text-[16px] font-medium text-gray-800">
+            <div className="relative">
+              <span className="hover:text-blue-600 cursor-pointer">Flight + Hotel</span>
+              <span className="absolute -top-3 -right-3 text-white text-[10px] bg-red-500 px-1 rounded-sm">Bundle and save!</span>
+            </div>
+            <span className="hover:text-blue-600 cursor-pointer">Hotels & Homes</span>
+            <div className="relative flex items-center space-x-1">
+              <span className="hover:text-blue-600 cursor-pointer">Transport</span>
+              <MdKeyboardArrowDown />
+              <span className="absolute -top-3 -right-4 text-white text-[10px] bg-red-500 px-1 rounded-sm">New!</span>
+            </div>
+            <span className="hover:text-blue-600 cursor-pointer">Activities</span>
+            <span className="hover:text-blue-600 cursor-pointer">Coupons & Deals</span>
+            <span className="text-xl">•••</span>
+          </div>
         </div>
 
-        {/* Desktop Nav */}
-        <ul className="hidden md:flex flex-1 justify-center space-x-6 text-lg font-medium">
-          <li><a href="#home" className="text-white hover:text-black">Home</a></li>
-          <li><a href="#about" className="text-white hover:text-black">About</a></li>
-          <li><a href="#services" className="text-white hover:text-black">Service</a></li>
-          <li><a href="#games" className="text-white hover:text-black">Games</a></li>
-          <li><a href="#contact" className="text-white hover:text-black">Contact</a></li>
-        </ul>
+        {/* Right */}
+        <div className="flex items-center space-x-3 text-sm font-medium">
+          <div className="flex items-center space-x-1">
+            <img src={flag} alt="UK" className="w-10 h-7 rounded-sm" />
+            <span className="text-[16px]" >Rs.</span>
+          </div>
+          <div>
+            <Link to="/login" className="text-blue-600 font-semibold hover:underline">
+              Sign in
+            </Link>
+          </div>
 
-        {/* WhatsApp Button */}
-        <div className="flex justify-center md:justify-start space-x-4">
-          <button className="bg-green-500 px-5 py-2 font-semibold rounded-md text-white hover:scale-105 transition">
-            WhatsApp
+          <div>
+            <Link to="/login" className="text-[16px] hidden md:block border border-blue-500 text-blue-600 px-4 py-1 rounded-full hover:bg-blue-50">
+              Create account
+            </Link>
+          </div>
+          <FaShoppingCart className=" text-[20px]  text-gray-700" />
+          <button
+            
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            {menuOpen ? <RxCross2 className="text-2xl" /> : <GiHamburgerMenu className="text-2xl" />}
           </button>
-        </div>
-
-        {/* Mobile Menu Icon */}
-        <div
-          className="md:hidden text-white text-2xl cursor-pointer"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          {menuOpen ? <FaTimes /> : <FaBars />}
         </div>
       </div>
 
-      {/* Mobile Nav Links */}
+      {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden mt-4">
-          <ul className="space-y-3 text-white text-lg font-medium">
-            <li><a href="#home" onClick={() => setMenuOpen(false)}>Home</a></li>
-            <li><a href="#about" onClick={() => setMenuOpen(false)}>About</a></li>
-            <li><a href="#services" onClick={() => setMenuOpen(false)}>Service</a></li>
-            <li><a href="#games" onClick={() => setMenuOpen(false)}>Games</a></li>
-            <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a></li>
-          </ul>
+        <div className="lg:hidden bg-white border-t text-sm px-4 py-3 space-y-3">
+          <span className="block">Flight + Hotel</span>
+          <span className="block">Hotels & Homes</span>
+          <span className="block">Transport</span>
+          <span className="block">Activities</span>
+          <span className="block">Coupons & Deals</span>
         </div>
       )}
     </nav>

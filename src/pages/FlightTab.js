@@ -17,10 +17,10 @@ import airAsia from "../image/flight1.png";       // Adjust path as needed
 import cathay from "../image/flight2.png"; 
 
 import hsbc from "../image/dubai.jpg";
-import idfc from "../image/dubai.jpg";
-import snow from "../image/dubai.jpg";
-import accor from "../image/dubai.jpg";
-import windowImg from "../image/dubai.jpg"; 
+import idfc from "../image/uttarakhand.jpg";
+import snow from "../image/kerela.jpg";
+import accor from "../image/rajsthan.jpg";
+import windowImg from "../image/himachal.avif"; 
 
 
 import delhi from '../image/delhi.jpg';
@@ -40,7 +40,7 @@ const tabs = [
   { icon: <BsBalloon size={24} />, label: 'Tours & Attractions', path: '/ToursAndAttractions' },
   { icon: <MdFlight size={28} />, label: 'Flights', path: '/flights', new: true, active: true },
   { icon: <MdHotel size={28} />, label: 'Hotels', path: '/hotels' },
-  { icon: <MdHolidayVillage size={28} />, label: 'Homestays & Villas', path: '/homestays' },
+  { icon: <MdHolidayVillage size={28} />, label: 'Homestays & Villas', path: '/homeStay' },
   { icon: <MdCardTravel size={28} />, label: 'Holiday Packages', path: '/holiday-packages' },
   { icon: <MdTrain size={28} />, label: 'Trains', path: '/trains' },
   { icon: <MdDirectionsBus size={28} />, label: 'Buses', path: '/buses' },
@@ -96,8 +96,7 @@ const offers = [
 
 const flights = [
   {
-    image: chennai
-    , // Replace with actual image
+    image: chennai,
     city: "Chennai Flights",
     via: "Via - Delhi, Mumbai, Coimbatore, Madurai",
   },
@@ -331,7 +330,7 @@ const FlightTab = () => {
     <div className="max-w-6xl bg-white rounded-2xl shadow-lg p-6 md:p-10  mx-auto mt-10">
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-2xl font-bold">
+        <h2 className="text-3xl font-bold">
           <span className="text-black">Offers</span>
         </h2>
         <div className="flex space-x-6 text-sm font-semibold text-gray-600">
@@ -452,8 +451,8 @@ const FlightTab = () => {
       ))}
     </div>
 
-    <div className=" py-12 px-4 md:px-16">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
+    <div className="bg-gray-50 py-12 px-8 mt-[20px]">
+      <div className=" max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
         {faqs.map((faq, idx) => (
           <div key={idx}>
             <h3 className="text-lg font-semibold text-gray-900">

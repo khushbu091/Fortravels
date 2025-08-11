@@ -15,7 +15,7 @@ const Navbar = () => {
         {/* Left */}
         <div className="flex items-center space-x-6">
           <div className="flex items-center">
-            <span className="text-3xl font-semibold text-gray-800">Travelling</span>
+            <span className="text-3xl font-semibold text-gray-800">Travel's</span>
 
           </div>
 

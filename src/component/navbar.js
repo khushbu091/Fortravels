@@ -15,24 +15,24 @@ const Navbar = () => {
         {/* Left */}
         <div className="flex items-center space-x-6">
           <div className="flex items-center">
-            <span className="text-3xl font-semibold text-gray-800">Travel's</span>
+             <Link to="/hotels"><span className="text-3xl font-semibold text-gray-800">Travels</span></Link>
 
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center space-x-5 text-[16px] font-medium text-gray-800">
             <div className="relative">
-              <span className="hover:text-blue-600 cursor-pointer">Flight + Hotel</span>
-              <span className="absolute -top-3 -right-3 text-white text-[10px] bg-red-500 px-1 rounded-sm">Bundle and save!</span>
+              <Link to="/hotels"><span className="hover:text-blue-600 cursor-pointer">Hotel</span></Link>
+              <span className="absolute -top-6 -right-3 text-white text-[8px] bg-red-500 px-1 rounded-sm w-[70px]">Bundle and save!</span>
             </div>
-            <span className="hover:text-blue-600 cursor-pointer">Hotels & Homes</span>
+            <Link to="/flights"><span className="hover:text-blue-600 cursor-pointer">Flight</span></Link>
             <div className="relative flex items-center space-x-1">
-              <span className="hover:text-blue-600 cursor-pointer">Transport</span>
+              <Link to="/ToursAndAttractions"><span className="hover:text-blue-600 cursor-pointer">Tours & Attractions</span></Link>
               <MdKeyboardArrowDown />
               <span className="absolute -top-3 -right-4 text-white text-[10px] bg-red-500 px-1 rounded-sm">New!</span>
             </div>
-            <span className="hover:text-blue-600 cursor-pointer">Activities</span>
-            <span className="hover:text-blue-600 cursor-pointer">Coupons & Deals</span>
+            <Link to="/homeStay"><span className="hover:text-blue-600 cursor-pointer">Homestays & Villas</span></Link>
+            <Link to="/holiday-packages"><span className="hover:text-blue-600 cursor-pointer">Holiday Packages</span></Link>
             <span className="text-xl">•••</span>
           </div>
         </div>

@@ -1,3 +1,5 @@
+import { FaInstagram, FaXTwitter, FaLinkedinIn, FaFacebookF } from "react-icons/fa6";
+
 import {
   MdFlight,
   MdHotel,
@@ -30,15 +32,15 @@ import accor from "../image/luxe2.jpg";
 import windowImg from "../image/luxe3.jpg"; 
 
 const tabs = [
-  { icon: <BsBalloon size={24} />, label: 'Tours & Attractions', path: '/ToursAndAttractions' },
-  { icon: <MdFlight size={28} />, label: 'Flights', path: '/flights',  },
   { icon: <MdHotel size={28} />, label: 'Hotels', path: '/hotels' },
-  { icon: <MdHolidayVillage size={28} />, label: 'Homestays & Villas', path: '/homeStay', new: true, active: true },
-  { icon: <MdCardTravel size={28} />, label: 'Holiday Packages', path: '/holiday-packages' },
+  { icon: <MdFlight size={28} />, label: 'Flights', path: '/flights',  },
+  { icon: <MdCardTravel size={28} />, label: 'Holiday Packages', path: '/holiday-packages' }, 
   { icon: <MdTrain size={28} />, label: 'Trains', path: '/trains' },
   { icon: <MdDirectionsBus size={28} />, label: 'Buses', path: '/buses' },
   { icon: <MdLocalTaxi size={28} />, label: 'Cabs', path: '/cabs' },
   { icon: <FaShip size={24} />, label: 'Cruise', path: '/cruise', new: true },
+  { icon: <MdHolidayVillage size={28} />, label: 'Homestays & Villas', path: '/homeStay', new: true, active: true },
+  { icon: <BsBalloon size={24} />, label: 'Tours & Attractions', path: '/ToursAndAttractions' },
 ];
 
  const flights = [
@@ -318,6 +320,22 @@ const HomeStays=()=>{
 
                 </div>
                 </div>
+                <footer className="bg-black text-white py-6 px-8 flex flex-col md:flex-row items-center justify-between">
+                      
+                            {/* Social Icons */}
+                            <div className="flex items-center gap-8 text-3xl">
+                                <FaInstagram className="hover:text-gray-400 cursor-pointer" />
+                                <FaXTwitter className="hover:text-gray-400 cursor-pointer" />
+                                <FaLinkedinIn className="hover:text-gray-400 cursor-pointer" />
+                                <FaFacebookF className="hover:text-gray-400 cursor-pointer" />
+                            </div>
+                
+                            {/* Copyright */}
+                            <p className="text-sm mt-4 md:mt-0">
+                                © 2025 Travel's
+                            </p>
+                            </footer>
+                
                 
         </>
     );

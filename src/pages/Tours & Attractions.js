@@ -55,15 +55,15 @@ import muscat from '../image/muscat.jpg';
 import pokhara from '../image/pokhara.jpg';
 
 const tabs = [
-  { icon: <BsBalloon size={24} />, label: 'Tours & Attractions', path: '/ToursAndAttractions', new: true, active: true },
-  { icon: <MdFlight size={28} />, label: 'Flights', path: '/flights',  },
   { icon: <MdHotel size={28} />, label: 'Hotels', path: '/hotels' },
-  { icon: <MdHolidayVillage size={28} />, label: 'Homestays & Villas', path: '/homestays' },
-  { icon: <MdCardTravel size={28} />, label: 'Holiday Packages', path: '/holiday-packages' },
+  { icon: <MdFlight size={28} />, label: 'Flights', path: '/flights',  },
+  { icon: <MdCardTravel size={28} />, label: 'Holiday Packages', path: '/holiday-packages' }, 
   { icon: <MdTrain size={28} />, label: 'Trains', path: '/trains' },
   { icon: <MdDirectionsBus size={28} />, label: 'Buses', path: '/buses' },
   { icon: <MdLocalTaxi size={28} />, label: 'Cabs', path: '/cabs' },
   { icon: <FaShip size={24} />, label: 'Cruise', path: '/cruise', new: true },
+  { icon: <MdHolidayVillage size={28} />, label: 'Homestays & Villas', path: '/homeStay' },
+  { icon: <BsBalloon size={24} />, label: 'Tours & Attractions', path: '/ToursAndAttractions', new: true, active: true },
 ];
 
 const destinations = [
